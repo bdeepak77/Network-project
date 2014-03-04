@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "IITH Network Tool",
+  "description": "This extension lets you download any file over internet according to your and server's convinence.",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.jpg",
+    "default_popup": "welcome.html"
+  },
+    
+  "content_scripts": [ 
+  {
+   "matches": [
+                "*://*/*.*",
+                "file:///*/*.*"
+	],
+	
+	"css": ["demo.css", "flat-ui.css", "bootstrap.css"],
+	
+	"run_at": "document_start",
+	"all_frames": true
+	
+  }
+  ],
+  "permissions": [ "tabs" ]
+}
